@@ -1,6 +1,7 @@
 package io.learningspring.postgre.services;
 
 import io.learningspring.postgre.database.ProductDB;
+import io.learningspring.postgre.database.ProductDB_JDBC;
 import io.learningspring.postgre.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,19 +15,19 @@ public class ProductService {
 
     @Autowired
     ProductDB db;
-    List<Product> products = db.getProducts();
+    List<Product> products = db.findAll();
 
     public List<Product> getProducts() {
-        return db.getProducts();
+        return db.findAll();
     }
 
     public void addProduct(Product product){
-        db.saveProduct(product);
+        db.save(product);
     }
 
-    //public void removeProduct(Product product){
-      //  products.remove(product);
-    //}
+    public void removeProduct(Product product){
+        db.delete(product);
+    }
 
     public List<Product> expiredWarranty(){
         List<Product> expiredWarranty = new ArrayList<>();

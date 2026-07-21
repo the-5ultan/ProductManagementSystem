@@ -1,16 +1,17 @@
 package io.learningspring.postgre.services;
 
-import io.learningspring.postgre.database.ProductDB;
+import io.learningspring.postgre.repositories.ProductDB;
 //import io.learningspring.postgre.database.ProductDB_JDBC;
 import io.learningspring.postgre.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-@Component
+@Service
 public class ProductService {
 
     @Autowired

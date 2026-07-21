@@ -1,7 +1,7 @@
-package org.example.services;
+package io.learningspring.postgre.services;
 
-import org.example.database.ProductDB;
-import org.example.entities.Product;
+import io.learningspring.postgre.database.ProductDB;
+import io.learningspring.postgre.entities.Product;
 
 import java.util.ArrayList;
 import java.util.Calendar;

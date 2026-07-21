@@ -1,4 +1,4 @@
-package org.example.entities;
+package io.learningspring.postgre.entities;
 
 public class Product {
     private String name;

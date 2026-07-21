@@ -1,6 +1,6 @@
-package org.example.database;
+package io.learningspring.postgre.database;
 
-import org.example.entities.Product;
+import io.learningspring.postgre.entities.Product;
 
 import javax.xml.transform.Result;
 import java.sql.*;

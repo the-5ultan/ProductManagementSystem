@@ -1,14 +1,18 @@
 package io.learningspring.postgre.database;
 
 import io.learningspring.postgre.entities.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ProductDB {
-    Connection  connection = null;
+    @Autowired
+    Connection  connection;
 
     public ProductDB() {
         try {

@@ -1,5 +1,8 @@
 package io.learningspring.postgre.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Product {
     private String name;
     private String type;

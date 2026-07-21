@@ -2,14 +2,18 @@ package io.learningspring.postgre.services;
 
 import io.learningspring.postgre.database.ProductDB;
 import io.learningspring.postgre.entities.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+@Component
 public class ProductService {
 
-    ProductDB db = new ProductDB();
+    @Autowired
+    ProductDB db;
     List<Product> products = db.getProducts();
 
     public List<Product> getProducts() {

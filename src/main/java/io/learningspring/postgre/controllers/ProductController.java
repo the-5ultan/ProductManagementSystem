@@ -3,10 +3,7 @@ package io.learningspring.postgre.controllers;
 import io.learningspring.postgre.entities.Product;
 import io.learningspring.postgre.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +30,13 @@ public class ProductController {
         return productService.expiredWarranty();
     }
 
-    @RequestMapping("/product/{}")
-    public Product getProduct(@RequestParam String name) {
+    @GetMapping("/product/{name}")
+    public Product getProduct(@PathVariable String name) {
+        return productService.getByName(name);
+    }
 
+    @PostMapping("/product")
+    public void addProduct(@RequestBody Product product) {
+        productService.addProduct(product);
     }
 }

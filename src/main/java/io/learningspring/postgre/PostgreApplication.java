@@ -13,11 +13,13 @@ public class PostgreApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(PostgreApplication.class, args);
-		ProductService service = context.getBean(ProductService.class);
-		List<Product> products = service.getProducts();
-		for (Product product : products) {
-			System.out.println(product);
-		}
+
+
+//		ProductService service = context.getBean(ProductService.class);
+//		List<Product> products = service.getProducts();
+//		for (Product product : products) {
+//			System.out.println(product);
+//		}
 	}
 
 }

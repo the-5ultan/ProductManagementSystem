@@ -54,4 +54,8 @@ public class ProductService {
         }
         return lp;
     }
+
+    public Product getByName(String name){
+        return db.findByName(name);
+    }
 }
